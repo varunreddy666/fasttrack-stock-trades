@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Entered the build phases
+      - mvn clean package
+  post_build:
+    commands:
+      - echo stock-trades application build successfully generated
+       
+artifacts:
+    files:
+      - target/stocktrades.jar
+    discard-paths: yes
