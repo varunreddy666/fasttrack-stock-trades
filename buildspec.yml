@@ -13,6 +13,6 @@ artifacts:
     files:
       - target/stocktrades.jar
         appspec.yml
-        config/*.sh
+        
         
     discard-paths: yes
