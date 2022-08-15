@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 cd /home/ec2-user/application/server
+
 pat="$(pwd)"
 echo $pat > /tmp/server_start.log
 
