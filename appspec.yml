@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /home/stocktrades/application/server/stocktrades.jar
-    destination: /home/stocktrades/application/artifacts/stocktrades_old.jar
-  - source: /target/stocktrades.jar
-    destination: /home/stocktrades/application/server/
+  - source: /home/ec2-user/application/server/stocktrades.jar
+    destination: /home/ec2-user/application/archive/stocktrades_old.jar
+  - source: target/stocktrades.jar
+    destination: /home/ec2-user/application/server/
 hooks:
   ApplicationStop:
     - location: scripts/server_stop.sh
@@ -12,5 +12,3 @@ hooks:
   ApplicationStart:
     - location: scripts/server_start.sh
       timeout: 300
-  ValidateService:
-    - location: scripts/basic_health_check.sh
