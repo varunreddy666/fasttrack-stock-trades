@@ -7,8 +7,8 @@
         </Console>
 
         <RollingFile name="RollingFile"
-            fileName="/home/ec2-user/application/server/logs/stocktrades.log"
-            filePattern="/home/ec2-user/application/server/logs/$${date:yyyy-MM}/stocktrades-%d{-dd-MMMM-yyyy}-%i.log.gz">
+            fileName="./logs/stocktrades.log"
+            filePattern="./logs/$${date:yyyy-MM}/stocktrades-%d{-dd-MMMM-yyyy}-%i.log.gz">
             <PatternLayout>
                 <pattern>%d %p %C{1.} [%t] %m%n</pattern>
             </PatternLayout>
@@ -31,7 +31,7 @@
         </Root>
 
         <!-- LOG "io.stock.trades*" at TRACE level -->
-        <Logger name="io.stock.trades" level="info"></Logger>
+        <Logger name="io.stock.trades" level="trace"></Logger>
     </Loggers>
 
 </Configuration>
