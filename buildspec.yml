@@ -12,7 +12,7 @@ phases:
 artifacts:
     files:
       - target/stocktrades.jar
-        appspec.yml
-        config/*.sh
+      -  appspec.yml
+        
         
     discard-paths: yes
