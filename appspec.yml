@@ -1,14 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /home/ec2-user/application/server/stocktrades.jar
-    destination: /home/ec2-user/application/archive/stocktrades_old.jar
-  - source: target/stocktrades.jar
+  - source: /
     destination: /home/ec2-user/application/server/
+    
 hooks:
   ApplicationStop:
     - location: scripts/server_stop.sh
       timeout: 300
+      runas: ec2-user
   ApplicationStart:
     - location: scripts/server_start.sh
       timeout: 300
+      runas: ec2-user
