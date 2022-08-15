@@ -14,5 +14,4 @@ artifacts:
       - target/stocktrades.jar
       - appspec.yml
         
-        
     discard-paths: yes
