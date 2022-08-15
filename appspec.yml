@@ -6,12 +6,12 @@ files:
     
 hooks:
   BeforeInstall:
-    - location: config/before_install.sh
+    - location: ./before_install.sh
   ApplicationStop:
-    - location: config/server_stop.sh
+    - location: ./server_stop.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
-    - location: config/server_start.sh
+    - location: ./server_start.sh
       timeout: 300
       runas: ec2-user
