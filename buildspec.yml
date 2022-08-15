@@ -7,7 +7,7 @@ phases:
       - mvn clean package
   post_build:
     commands:
-      - echo stock-trades application build successfully.
+      - echo stock-trades application build successfully..
        
 artifacts:
     files:
